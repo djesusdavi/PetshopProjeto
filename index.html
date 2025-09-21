@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">LOGO AQUI</div>
+      <nav class="menu">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="cart" id="cart-btn">🛒 <span id="cart-count">0</span></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>PetShop Online 🐾</h1>
+        <p>Produtos exclusivos para pets direto na sua casa. Compre agora e receba sem complicações!</p>
+        <a href="#produtos" class="btn">Ver Produtos</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/500x400" alt="Pets felizes">
+      </div>
+    </div>
+  </section>
+
+  <!-- Produtos -->
+  <section id="produtos" class="products">
+    <div class="container">
+      <h2>Produtos em Destaque</h2>
+      <div class="grid" id="product-list">
+        <!-- Produtos serão inseridos pelo JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>Somos um petshop online em modelo dropshipping. Trazemos os melhores produtos do mercado para o conforto e bem-estar do seu pet, sem a necessidade de estoque próprio.</p>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <form class="form">
+        <input type="text" placeholder="Seu Nome" required>
+        <input type="email" placeholder="Seu Email" required>
+        <textarea placeholder="Sua Mensagem" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 PetShop Online - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Carrinho -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <h3>Seu Carrinho</h3>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: R$ <span id="cart-total">0,00</span></p>
+      <button class="btn" id="checkout-btn">Finalizar Compra</button>
+      <button class="btn btn-light" id="close-cart">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
