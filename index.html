@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetShop Online</title>
+  <meta name="description" content="Compre produtos para pets com entrega rápida e preços acessíveis. Seu pet merece o melhor!">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🐾 PetShop</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Rações</a></li>
+        <li><a href="#">Brinquedos</a></li>
+        <li><a href="#">Acessórios</a></li>
+        <li><a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <h1>Cuide do seu pet com amor ❤️</h1>
+    <p>Encontre tudo o que seu melhor amigo precisa!</p>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="products">
+    <h2>Produtos em destaque</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="placeholder1.jpg" alt="Ração Premium">
+        <h3>Ração Premium</h3>
+        <p class="price">R$ 120,00</p>
+        <button class="add-to-cart" data-name="Ração Premium" data-price="120.00">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="placeholder2.jpg" alt="Brinquedo Mordedor">
+        <h3>Brinquedo Mordedor</h3>
+        <p class="price">R$ 45,00</p>
+        <button class="add-to-cart" data-name="Brinquedo Mordedor" data-price="45.00">Adicionar ao Carrinho</button>
+      </div>
+
+      <div class="product-card">
+        <img src="placeholder3.jpg" alt="Caminha Aconchegante">
+        <h3>Caminha Aconchegante</h3>
+        <p class="price">R$ 200,00</p>
+        <button class="add-to-cart" data-name="Caminha Aconchegante" data-price="200.00">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL CARRINHO -->
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+      <span class="close-cart">&times;</span>
+      <h2>Seu Carrinho</h2>
+      <div id="cart-items"></div>
+      <p class="total">Total: R$ <span id="cart-total">0.00</span></p>
+      <form id="checkout-form" action="checkout.php" method="POST">
+        <input type="hidden" name="produtos" id="checkout-produtos">
+        <input type="hidden" name="total" id="checkout-total">
+        <button type="submit" class="checkout-btn">Finalizar Compra</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PetShop Online - Todos os direitos reservados</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
